@@ -1,0 +1,4 @@
+scrapy
+pandas
+numpy
+bs4
