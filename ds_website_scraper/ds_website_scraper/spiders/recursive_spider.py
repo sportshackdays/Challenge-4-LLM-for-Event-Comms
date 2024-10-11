@@ -62,9 +62,21 @@ def remove_empty_and_simplify(node):
 class RecursiveSpider(scrapy.Spider):
 
     name = "recursive_spider"
-
-    custom_settings = {"DEPTH_LIMIT": 6}
-
+    
+    # DON'T Change theese settings! We can't overload the website!
+    custom_settings = {
+        "DEPTH_LIMIT": 6,
+        'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+        'DOWNLOAD_DELAY': 1, 
+        'RETRY_TIMES': 5,
+        'TELNETCONSOLE_ENABLED': False,
+        'FEED_EXPORT_ENCODING': 'utf-8',
+        'DEFAULT_REQUEST_HEADERS': {
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en',
+        }
+    }
+    
     start_urls = ["https://www.datasport.com/en/", "https://www.datasport.com/en/erv/"]
     allowed_domains = ["datasport.com"]
 
