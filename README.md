@@ -22,7 +22,8 @@ We provide two labels for each message:
      - `"respond"`
      - `"forward_to_human"`
      - `"nothing"`
+     -  `null` (used for outgoing emails)
 
 ### Personal Data Placeholders
 
-Personal data is replaced by placeholders enclosed in brackets, such as `[placeholder_id]`. In any response message, it is required to use the same placeholders with the correct IDs.
+Personal data is replaced by placeholders enclosed in brackets, such as `<NAME_ID>`. In any response message, it is required to use the same placeholders with the correct IDs.
