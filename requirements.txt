@@ -2,3 +2,9 @@ scrapy
 pandas
 numpy
 bs4
+crawl4ai
+tqdm
+matplotlib
+torch
+transformers
+streamlit
